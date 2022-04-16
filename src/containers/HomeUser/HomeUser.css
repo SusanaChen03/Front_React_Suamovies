@@ -1,0 +1,9 @@
+images{
+    width: 100%;
+    height: 30%;
+}
+
+.carrusel{
+    display: flex;
+    justify-content: center;
+}
