@@ -34,7 +34,7 @@ const Register = () => {
               <input class="form-check-input"  type="checkbox"  id="disabledFieldsetCheck"  disabled />
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">  Submit  </button>
+          <button type="submit" class="btn btn-primary">Crear Cuenta </button>
         </fieldset>
       </form>
     </div>
