@@ -1,9 +1,16 @@
 import './Login.css';
+import image from '../../images/deadpool.jpg'
 
 
 const Login = () => {
+
+
+
+
   return (
     <div>
+      //img src={/*image*/} alt="background"
+
       <div div class="form-group">
         <h1>Entra en tu cuenta</h1>
 
