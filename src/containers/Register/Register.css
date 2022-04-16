@@ -1,0 +1,11 @@
+label {
+    display: block;
+    border-radius: 100px;
+};
+
+.sendButton {
+    display: block;
+    margin: 20px auto;
+}
+  
+  
