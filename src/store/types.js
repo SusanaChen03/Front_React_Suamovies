@@ -1,0 +1,7 @@
+const USER_LOGGED = "USER_LOGGED";
+const USER_LOGOUT = "USER_LOGOUT";
+
+
+
+export {USER_LOGGED, USER_LOGOUT};
+
