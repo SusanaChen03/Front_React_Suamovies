@@ -7,5 +7,8 @@ label {
     display: block;
     margin: 20px auto;
 }
-  
-  
+
+.conditions{
+    color:gray;
+    font-size: small;
+}

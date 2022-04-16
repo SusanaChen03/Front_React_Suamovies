@@ -37,6 +37,11 @@ const Register = () => {
           <button type="submit" class="btn btn-primary">Crear Cuenta </button>
         </fieldset>
       </form>
+     <br></br> 
+      <p className="conditions">
+      Al crear la cuenta, aceptas los Términos y Condiciones, la Política de protección de datos y la Política de cookies. 
+      Suamovies va a tratar tus datos para poder prestarte sus servicios.
+      </p>
     </div>
   );
 };
