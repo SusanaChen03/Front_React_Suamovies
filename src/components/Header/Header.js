@@ -35,7 +35,7 @@ const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                + opciones
+                Alquileres
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
@@ -50,11 +50,6 @@ const Header = () => {
                 </li>
                 <li>
                   <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Mis datos               
-                  </a>
                 </li>
               </ul>
             </li>
