@@ -1,7 +1,7 @@
 import './InfoAdminRents.css';
 import { useState, useEffect } from "react";
 import { URL_API } from "../../store/types";
-import AdminCard from '../../components/MovieCard/AdminCard.js';
+import AdminCard from '../../components/AdminCard/AdminCard.js';
 
 const InfoAdminRents = () => {
 
