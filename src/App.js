@@ -5,9 +5,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header';
 import LoginUser from './containers/Login/Login';
 import Register from './containers/Register/Register.js'
-import MovieCard from './components/MovieCard/MovieCard.js'
 import HomeUser from './containers/HomeUser/HomeUser';
 import RentMovies from './containers/RentMovies/RentMovies.js';
+import InfoUserRents from './containers/InfoUserRents/InfoUserRents';
 
 function App() {
   console.log("hola");
@@ -20,7 +20,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/home' element={<HomeUser />} />
           <Route path='/rentMovies' element={<RentMovies />}/>
-          
+          <Route path='/infoUserRents' element={<InfoUserRents/>}/>
         </Routes>
       </BrowserRouter>
     </div>

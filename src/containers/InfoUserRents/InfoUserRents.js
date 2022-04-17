@@ -1,9 +1,9 @@
-import './infoUserRents.css';
+import './InfoUserRents.css';
 import { useState, useEffect } from "react";
 import { URL_API } from "../../store/types";
 
 
-const infoUserRents = () => {
+const InfoUserRents = () => {
 
 
   const [rent, setRent] = useState([]);
@@ -40,4 +40,4 @@ const infoUserRents = () => {
   );
 };
 
-export default infoUserRents;
+export default InfoUserRents;
