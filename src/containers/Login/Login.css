@@ -5,6 +5,11 @@
 
 }
 
+h1{
+    color: #649ff9;
+    font-weight:bold;
+}
+
 .containerLogin{
     width: 40%;
     margin-left: 30%;
@@ -13,3 +18,4 @@
 .buttonSubmit{
     margin-top: 20px;
 }
+

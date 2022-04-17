@@ -20,8 +20,7 @@ const LoginUser = () => {
         password: e.target[1].value
        
     };
-      let loginUser = await fetch(
-        URL_API + "/login",
+      let loginUser = await fetch( URL_API + "/login",
         {
           method: "POST",
           body: JSON.stringify(formData),
@@ -30,25 +29,25 @@ const LoginUser = () => {
           },
         }
       );
-      loginUser = await loginUser.json();
-        console.log(loginUser + "hola user");
+
+      const data = await loginUser.json();
+      
       if (loginUser != "User no founded") {
-        localStorage.setItem("token", loginUser.userToken);
-        localStorage.setItem("id", loginUser.idUser);
-        localStorage.setItem("rol", loginUser.role);
-        localStorage.setItem("name", loginUser.name);
-       if (localStorage.getItem("rol") === "admin") {
-          dispatch(actionCreator(USER_LOGGED));
-          dispatch(
-            actionCreator(SHOW_POPUP, "Te has logeado correctamente. Bienvenido")
-          );
+        sessionStorage.setItem("token", data.userToken);
+        sessionStorage.setItem("id", data.idUser);
+        sessionStorage.setItem("rol", data.role);
+        sessionStorage.setItem("name", data.name);
+
+       if (sessionStorage.getItem("rol") === "admin") {
+          dispatch( actionCreator(USER_LOGGED));
+          dispatch( actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenid@ Admin"));
+    
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
           navigate("/HomeUser");
         } else {
           dispatch(actionCreator(USER_LOGGED));
-          dispatch(
-            actionCreator(SHOW_POPUP, "Te has logeado correctamente. Bienvenido")
-          );
+          dispatch(actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenido" + {name: data.name}));
+            
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
           navigate("/HomeUser");
         }
@@ -67,7 +66,7 @@ const LoginUser = () => {
 
         <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
         <input type="email"  class="form-control"  id="email"  aria-describedby="emailHelp" placeholder="Introduce tu email"  />
-        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email a terceros </small>
+        <small className="sharemail" id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email a terceros </small>
       </div>
 
       <div div class="form-group containerLogin">
