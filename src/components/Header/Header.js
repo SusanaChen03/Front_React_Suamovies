@@ -6,7 +6,11 @@ import store from '../../store/store';
 import { Link } from 'react-router-dom';
 import { USER_LOGOUT } from "../../store/types";
 import {actionCreator} from "../../store/actionTypes.js";
+
+
+
 const Header = () => {
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -16,40 +20,32 @@ const Header = () => {
    
   const buttonHandlerSearh = async (e) => {
     try {
-       
       let value= e.target[0].value;
       console.log('value:'+value);
        
-      if(value==null || value=="")
-      {
+      if(value==null || value==""){
         navigate('/home');
       }else{
-
         console.log('/home?genre='+value+"&name="+value+"&actors="+value);
        
-        navigate({
-          pathname: '/home/'+value,
-          
-        });
+        navigate({pathname: '/home/'+value, })
+      };
        
-      }
-       
+    } catch (error) {
+      console.log(error);
     }
-    catch (error) {
-        console.log(error);
-      }
-    };
+    
+  };
   const buttonHandler = async () => {
     try {
-       
       sessionStorage.clear();
       dispatch(actionCreator(USER_LOGOUT));
       navigate('/');
+    }  catch (error) {
+      console.log(error);
     }
-    catch (error) {
-        console.log(error);
-      }
-    };
+  };
+
   useEffect(() => {
       store.subscribe(() => {
           console.log("El estado: " + store.getState().logged + "name:" + store.getState().name);
@@ -57,22 +53,18 @@ const Header = () => {
           setName(store.getState().name[0]);
           setLogged(store.getState().logged);
           setisAdmin(store.getState().isAdmin);
-           
       });
-      if(sessionStorage.getItem("name")!=null)
-      {
+
+      if(sessionStorage.getItem("name")!=null){
         setName(sessionStorage.getItem("name")[0]);
       }
-      
-     
       setLogged(sessionStorage.getItem("logged"));
   }, []);
+
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-      <Link to="/home"><a class="navbar-brand" href="#">
-          SuaMovies
-        </a></Link>
+      <Link to="/home"><a class="navbar-brand" href="#">SuaMovies </a></Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -80,13 +72,11 @@ const Header = () => {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-        
            
           {logged  && <li class="nav-item dropdown">
               <a
@@ -132,7 +122,6 @@ const Header = () => {
 
           </form>}
           {!logged  &&   < Link to="/register"><button className="register" type="button" class="btn btn-primary">Registrate</button></Link>}
-         
           {logged  && <button onClick={buttonHandler} className="register" type="button" class="btn btn-primary Login">Logout</button>}
           {logged  && <div className="circle">
           {name}
