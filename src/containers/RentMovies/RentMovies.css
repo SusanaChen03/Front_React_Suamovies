@@ -1,4 +1,5 @@
 @import url('https://icon-library.com/images/movies-icon/movies-icon-6.jpg');
+
 .allbody{
     display: flex;
     justify-content: center;
@@ -6,9 +7,11 @@
     min-height: 100vh;
     background: #131313;
   }
+
 *{
   font-family: 'Poppins', sans-serif;
 }
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -16,10 +19,8 @@
   grid-auto-rows: minmax(100px, auto);
 }
 
-
 .scontainer{
-  position: relative;
- 
+  position: relative; 
 }
 
 .scontainer .card{
@@ -72,14 +73,12 @@
 .scontainer .card .imgBx{
   top: -30%;
   transform: translateY(0%);
-    
 }
 
 .scontainer .card .imgBx img{
   position: absolute;
   top: 45%;
   left: 25%;
-   
   width: 170px;
 }
 
@@ -87,7 +86,6 @@
   position: absolute;
   bottom: -35px;
   width: 100%;
- 
   text-align: center;
   transition: 1s;
   z-index: 10;
@@ -111,7 +109,6 @@
   align-items: center;
   padding: 8px 20px;
   transition: 0.5s;opacity: 0;
-  
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -197,5 +194,4 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
-  
 }
