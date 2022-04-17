@@ -1,17 +1,17 @@
 import "./MovieCard.css";
 
-const MovieCard = () => {
+const MovieCard = (movie) => {
   return (
     <div className="movieCard">
       <img src="..." class="card-img-top" alt="..." />
 
-      <h5 class="card-title">Movie name {}</h5>
-      <li>Año: {}</li>
-      <li>Género: {} </li>
-      <li>Actores: {} </li>
-      <li>Precio: {} </li>
-      <li>Tiempo de alquiler: {} </li>
-      <li>Estado: {} </li>
+      <h5 class="card-title">Movie name {movie.name}</h5>
+      <li>Año: {movie.year}</li>
+      <li>Género: {movie.genre} </li>
+      <li>Actores: {movie.actor} </li>
+      <li>Precio: {movie.price} </li>
+      <li>Tiempo de alquiler: {movie.rentTime} </li>
+      <li>Estado: {movie.state} </li>
       <a href="#" class="btn btn-primary">Alquilar </a>
     </div>
   );
