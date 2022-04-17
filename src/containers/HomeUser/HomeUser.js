@@ -51,7 +51,7 @@ const HomeUser = () => {
   }, []);
 
   return (
-    <div >
+    <div className='home'>
       <div className='wrapper'>
         {movie.map((movie) =>{
           return <MovieCard movie={movie}/>
