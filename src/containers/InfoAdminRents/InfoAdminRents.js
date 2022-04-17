@@ -30,24 +30,21 @@ const InfoAdminRents = () => {
 
   return (
     <div >
-         <div className='tableContainer'  >
-           <table class="table">
-           <tr  >
-      <th scope="col" >Usuario</th>
-      <th scope="col" >Pelicula</th>
-      <th scope="col" >Genero</th>
-      <th scope="col" >Horas Alquiler</th>
-      <th scope="col" >Fecha Alquiler</th>
-      <th  scope="col" >Fecha Exp</th>
-    </tr>
-
-            
+      <div className='tableContainer'  >
+        <table class="table">
+          <tr>
+            <th scope="col" >Usuario</th>
+            <th scope="col" >Pelicula</th>
+            <th scope="col" >Genero</th>
+            <th scope="col" >Horas Alquiler</th>
+            <th scope="col" >Fecha Alquiler</th>
+            <th  scope="col" >Fecha Exp</th>
+        </tr>
         {rents.map((objRent) =>{
           return <AdminCard Rent={objRent}/>
         })}
         </table>
       </div>
-      
     </div>
   );
 };
