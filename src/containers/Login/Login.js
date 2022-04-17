@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {actionCreator} from "../../store/actionTypes.js";
 import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP, URL_API } from "../../store/types";
-import componentPopup from "../../containers/PopUp/PopUp.js";
+//component popup
 
 const LoginUser = () => {
  
