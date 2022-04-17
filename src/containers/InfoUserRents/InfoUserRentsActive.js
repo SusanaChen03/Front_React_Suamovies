@@ -35,7 +35,6 @@ const InfoUserRentsActive = () => {
           return <RentCard rent={objRent}/>
         })}
       </div>
-      
     </div>
   );
 };

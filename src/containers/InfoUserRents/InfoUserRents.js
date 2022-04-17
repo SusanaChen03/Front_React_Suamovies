@@ -4,8 +4,6 @@ import { URL_API } from "../../store/types";
 import RentCard from '../../components/RentCard/RentCard.js';
 
 const InfoUserRents = () => {
-
-
   const [rents, setRents] = useState([]);
 
   const rentsList = async () => {
@@ -29,13 +27,13 @@ const InfoUserRents = () => {
   }, []);
 
   return (
+
     <div className="userRent">
          <div className="wrapper userRent">
         {rents.map((objRent) =>{
           return <RentCard rent={objRent}/>
         })}
-      </div>
-      
+        </div>
     </div>
   );
 };
