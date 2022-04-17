@@ -24,7 +24,7 @@ const MovieCard = (movie) => {
           <h3>Año :{movie.movie.year}</h3>
           
         </div>
-        <a href="#" onClick={buttonHandler}>Alquilar</a>
+        <a href="#" onClick={buttonHandler}>Seleccionar</a>
       </div>
     </div>
   </div> 
