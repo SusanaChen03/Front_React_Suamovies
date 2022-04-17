@@ -9,7 +9,7 @@ import MovieCard from '../../components/MovieCard/MovieCard.js';
 
 
 const HomeUser = () => {
-  const navigate = useNavigate();
+
 
   const [movie, setMovie] = useState([]);
 
@@ -21,7 +21,7 @@ const HomeUser = () => {
     )
 
     const dataMovie = await movieResults.json();
-
+      console.log("dataMovie: " + dataMovie.length);
     setMovie(dataMovie);
   };
 
@@ -34,12 +34,12 @@ const HomeUser = () => {
   }, []);
 
   return (
-    <div>
-      <ul>
+    <div >
+      <div>
         {movie.map((movie) =>{
           return <MovieCard movie={movie}/>
         })}
-      </ul>
+      </div>
     </div>
   );
 };
