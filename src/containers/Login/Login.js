@@ -37,7 +37,7 @@ const LoginUser = () => {
         sessionStorage.setItem("id", data.idUser);
         sessionStorage.setItem("rol", data.role);
         sessionStorage.setItem("name", data.name);
-
+        sessionStorage.setItem("logged",true);
        if (sessionStorage.getItem("rol") === "admin") {
           dispatch( actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name }));
           dispatch( actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenid@ Admin"));

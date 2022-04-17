@@ -35,7 +35,7 @@ const HomeUser = () => {
 
   return (
     <div >
-      <div>
+      <div className='wrapper'>
         {movie.map((movie) =>{
           return <MovieCard movie={movie}/>
         })}

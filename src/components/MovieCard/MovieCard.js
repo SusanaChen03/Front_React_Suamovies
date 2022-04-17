@@ -4,23 +4,31 @@ import "./MovieCard.css";
 const MovieCard = (movie) => {
   console.log("movie: "+ movie.movie.year);
   const navigate = useNavigate();
-
+  let imagenMovie="https://assets.codepen.io/4164355/shoes.png";
   const buttonHandler = () => {
     navigate('/rentMovies', { state: movie });
 }
   return (
-    <div className="movieCard">
-      <img src="..." class="card-img-top" alt="..." />
-
-      <h5 class="card-title">{movie.movie.name}</h5>
-      <li>Año: {movie.movie.year}</li>
-      <li>Género: {movie.movie.genre} </li>
-      <li>Actores: {movie.movie.actor} </li>
-      <li>Precio: {movie.movie.price} </li>
-      <li>Tiempo de alquiler: {movie.movie.rentTime} </li>
-      <li>Estado: {movie.movie.state} </li>
-      <button onClick={buttonHandler} type="submit" class="btn btn-primary"> Alquilar </button>
+    <div class="container">
+    <div class="card">
+      <div class="imgBx">
+        <img  src={imagenMovie} />
+      </div>
+      <div class="contentBx">
+        <h2 class='titulo'>{movie.movie.name}</h2>
+        <div class="size">
+          <h3 >Género : {movie.movie.genre}</h3>
+           
+        </div>
+        <div class="color">
+          <h3>Año :{movie.movie.year}</h3>
+          
+        </div>
+        <a href="#" onClick={buttonHandler}>Alquilar</a>
+      </div>
     </div>
+  </div> 
+    
   );
 };
 
