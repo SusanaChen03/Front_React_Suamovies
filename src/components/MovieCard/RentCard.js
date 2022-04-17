@@ -4,7 +4,7 @@ import "./RentCard.css";
 const RentCard = (Rent) => {
    
  
-  let imagenRent="https://assets.codepen.io/4164355/shoes.png";
+  let imagenRent="https://icon-library.com/images/movies-icon/movies-icon-6.jpg";
   
   return (
     <div class="container">

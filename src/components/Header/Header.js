@@ -13,6 +13,32 @@ const Header = () => {
   const [logged, setLogged] = useState(false);
   const [isAdmin, setisAdmin] = useState(false);
   const [name, setName] = useState("");
+   
+  const buttonHandlerSearh = async (e) => {
+    try {
+       
+      let value= e.target[0].value;
+      console.log('value:'+value);
+       
+      if(value==null || value=="")
+      {
+        navigate('/home');
+      }else{
+
+        console.log('/home?genre='+value+"&name="+value+"&actors="+value);
+       
+        navigate({
+          pathname: '/home/'+value,
+          
+        });
+       
+      }
+       
+    }
+    catch (error) {
+        console.log(error);
+      }
+    };
   const buttonHandler = async () => {
     try {
        
@@ -33,7 +59,12 @@ const Header = () => {
           setisAdmin(store.getState().isAdmin);
            
       });
-       setName(sessionStorage.getItem("name")[0]);
+      if(sessionStorage.getItem("name")!=null)
+      {
+        setName(sessionStorage.getItem("name")[0]);
+      }
+      
+     
       setLogged(sessionStorage.getItem("logged"));
   }, []);
   return (
@@ -84,32 +115,22 @@ const Header = () => {
                 </li>
               </ul>
             </li>}
-            {logged && isAdmin && <li class="nav-item dropdown">
-               
-            <Link to="/infoUserRents/active">   <a
-                class="nav-link"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                 
-              >
-                Todos los alquileres
-              </a></Link>
-               
-            </li>}
+            {logged && isAdmin && <Link to="/Admin/rents" className="nav-link"> 
+                    Todos Alquileres
+                   </Link>}
           </ul>
-          <form class="d-flex hd">
+          {logged && <form class="d-flex" onSubmit={(e) => buttonHandlerSearh(e)}>
             <input
               class="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button  class="btn btn-outline-success" type="submit">
+            <button  class="btn btn-outline-success" type="submit"  >
               Search
             </button>
 
-          </form>
+          </form>}
           {!logged  &&   < Link to="/register"><button className="register" type="button" class="btn btn-primary">Registrate</button></Link>}
          
           {logged  && <button onClick={buttonHandler} className="register" type="button" class="btn btn-primary Login">Logout</button>}

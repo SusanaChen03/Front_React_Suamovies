@@ -4,7 +4,7 @@ import "./MovieCard.css";
 const MovieCard = (movie) => {
   console.log("movie: "+ movie.movie.year);
   const navigate = useNavigate();
-  let imagenMovie="https://assets.codepen.io/4164355/shoes.png";
+  let imagenMovie="https://icon-library.com/images/movies-icon/movies-icon-6.jpg";
   const buttonHandler = () => {
     navigate('/rentMovies', { state: movie });
 }
@@ -12,7 +12,7 @@ const MovieCard = (movie) => {
     <div class="container">
     <div class="card">
       <div class="imgBx">
-        <img  src={imagenMovie} />
+        <img  src={movie.movie.image} />
       </div>
       <div class="contentBx">
         <h2 class='titulo'>{movie.movie.name}</h2>

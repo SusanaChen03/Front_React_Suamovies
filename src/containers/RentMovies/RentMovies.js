@@ -8,7 +8,7 @@ const RentMovies = () =>{
    const navigate = useNavigate();
     const location = useLocation();
 
-let imagenMovie="https://assets.codepen.io/4164355/shoes.png";
+let imagenMovie="https://icon-library.com/images/movies-icon/movies-icon-6.jpg";
     const [movies, setMovie] = useState([]);
 
     const buttonHandler = async () => {
@@ -59,7 +59,7 @@ let imagenMovie="https://assets.codepen.io/4164355/shoes.png";
     <div class="scontainer">
   <div class="card">
     <div class="imgBx">
-      <img  src={imagenMovie} />
+      <img  src={movies.image} />
     </div>
     <div class="contentBx">
       <h2>{movies.name}</h2>

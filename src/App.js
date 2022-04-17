@@ -9,6 +9,7 @@ import HomeUser from './containers/HomeUser/HomeUser';
 import RentMovies from './containers/RentMovies/RentMovies.js';
 import InfoUserRents from './containers/InfoUserRents/InfoUserRents';
 import InfoUserRentsActive from './containers/InfoUserRents/InfoUserRentsActive';
+import InfoAdminRents from './containers/InfoAdminRents/InfoAdminRents';
 
 function App() {
   console.log("hola");
@@ -19,14 +20,17 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginUser />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/home/:id' element={<HomeUser />} />
           <Route path='/home' element={<HomeUser />} />
           <Route path='/rentMovies' element={<RentMovies />}/>
           <Route path='/infoUserRents' element={<InfoUserRents/>}/>
           <Route path='/infoUserRents/active' element={<InfoUserRentsActive/>}/>
+          <Route path='/Admin/rents' element={<InfoAdminRents/>}/>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;

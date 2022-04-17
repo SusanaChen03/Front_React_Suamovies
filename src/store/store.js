@@ -13,7 +13,7 @@ const initialState = {
 
 const reductor = (state = initialState, action) => {
     if (action.type === USER_LOGGED) {
-        let oIsAdmin=false;
+       let oIsAdmin=false;
        if(action.payload.role=="admin")
        {
         oIsAdmin=true;
