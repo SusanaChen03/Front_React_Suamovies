@@ -1,6 +1,6 @@
 const USER_LOGGED = "USER_LOGGED";
 const USER_LOGOUT = "USER_LOGOUT";
-const URL_API = "http://localhost:8000";
+const URL_API = "https://suamovies-backend.herokuapp.com";
 const SHOW_POPUP = "SHOW_POPUP";
 const HIDDEN_POPUP = "HIDDEN_POPUP";
 

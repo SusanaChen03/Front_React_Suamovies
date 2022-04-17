@@ -39,7 +39,11 @@ const Register = () => {
         dispatch( actionCreator(SHOW_POPUP, "No se a podido crear usuario"));
     
         setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
-      } else {
+      }else
+      if(data === "wrongexist"){
+       alert("El email ya está registrado.");
+      } 
+      else {
         dispatch( actionCreator(SHOW_POPUP, "Se a creado satisfactoriamente"));
     
         setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);

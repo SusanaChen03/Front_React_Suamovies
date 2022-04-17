@@ -31,7 +31,7 @@ const LoginUser = () => {
       );
 
       const data = await loginUser.json();
-      
+      console.log("loginUser:"+data);
       if (loginUser != "User no founded") {
         sessionStorage.setItem("token", data.userToken);
         sessionStorage.setItem("id", data.idUser);
