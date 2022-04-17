@@ -2,7 +2,7 @@ import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {actionCreator} from "../../store/actionTypes.js";
-import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP, URL_API } from "../../store/types";
+import { HIDDEN_POPUP, SHOW_POPUP, URL_API } from "../../store/types";
 
 const Register = () => {
 
@@ -10,7 +10,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const formSubmit = async (e) => {
-    // Make the submit dont refresh the page
+    
     e.preventDefault();
     console.log(e.target[0].value + "target");
     try {
@@ -39,8 +39,8 @@ const Register = () => {
         dispatch( actionCreator(SHOW_POPUP, "No se a podido crear usuario"));
     
         setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
-      }else
-      if(data === "wrongexist"){
+
+      }else if(data === "wrongexist"){
        alert("El email ya está registrado.");
       } 
       else {
@@ -82,10 +82,7 @@ const Register = () => {
       Suamovies va a tratar tus datos para poder prestarte sus servicios.
       </p>
       <button type="submit" class="btn btn-primary"> Crear Cuenta </button>
-          
-      
       </form>
-     
     </div>
   );
 };
