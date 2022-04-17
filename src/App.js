@@ -13,9 +13,10 @@ function App() {
   return (
     <div className="App">
          <BrowserRouter>
-    <Header/>
+      <Header/>
         <Routes>
           <Route path='/' element={<LoginUser />} />
+          <Route path='/register' element={<Register />} />
          
         </Routes>
       </BrowserRouter>

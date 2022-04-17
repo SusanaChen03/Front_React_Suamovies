@@ -73,9 +73,10 @@ const Header = () => {
             </button>
 
           </form>
-          {!logged  &&  <button className="register" type="button" class="btn btn-primary">Registrate</button>}
+          {!logged  &&   < Link to="/register"><button className="register" type="button" class="btn btn-primary">Registrate</button></Link>}
           {!logged  && <Link to="/login"><button className="register" type="button" class="btn btn-primary Login">Login</button></Link>}
-          {logged  && <Link to="/login"><button className="register" type="button" class="btn btn-primary Login">Logout</button></Link>}
+          {logged  && <Link to="/logout"><button className="register" type="button" class="btn btn-primary Login">Logout</button></Link>}
+        
         </div>
       </div>
     </nav>
