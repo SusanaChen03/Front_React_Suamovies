@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./MovieCard.css";
 
 const MovieCard = (movie) => {
   console.log("movie: "+ movie.movie.year);
+  const navigate = useNavigate();
+
+  const buttonHandler = () => {
+    navigate('/rentMovies', { state: movie });
+}
   return (
     <div className="movieCard">
       <img src="..." class="card-img-top" alt="..." />
@@ -13,7 +19,7 @@ const MovieCard = (movie) => {
       <li>Precio: {movie.movie.price} </li>
       <li>Tiempo de alquiler: {movie.movie.rentTime} </li>
       <li>Estado: {movie.movie.state} </li>
-      <a href="#" class="btn btn-primary">Alquilar </a>
+      <button onClick={buttonHandler} type="submit" class="btn btn-primary"> Alquilar </button>
     </div>
   );
 };

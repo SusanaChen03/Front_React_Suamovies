@@ -7,6 +7,7 @@ import LoginUser from './containers/Login/Login';
 import Register from './containers/Register/Register.js'
 import MovieCard from './components/MovieCard/MovieCard.js'
 import HomeUser from './containers/HomeUser/HomeUser';
+import RentMovies from './containers/RentMovies/RentMovies.js';
 
 function App() {
   console.log("hola");
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<LoginUser />} />
           <Route path='/register' element={<Register />} />
           <Route path='/home' element={<HomeUser />} />
+          <Route path='/rentMovies' element={<RentMovies />}/>
         </Routes>
       </BrowserRouter>
     </div>
