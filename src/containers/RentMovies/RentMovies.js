@@ -7,6 +7,7 @@ import { URL_API } from "../../store/types";
 const RentMovies = () =>{
    const navigate = useNavigate();
     const location = useLocation();
+
 let imagenMovie="https://assets.codepen.io/4164355/shoes.png";
     const [movies, setMovie] = useState([]);
 

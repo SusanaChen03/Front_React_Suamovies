@@ -6,23 +6,23 @@ import { URL_API } from "../../store/types";
 const InfoUserRents = () => {
 
 
-  const [rent, setRent] = useState([]);
+  const [rents, setRents] = useState([]);
 
-  const rentList = async () => {
-    const rentResults = await fetch( URL_API + "/rentUser/" + sessionStorage.getItem("id"),
+  const rentsList = async () => {
+    const rentsResults = await fetch( URL_API + "/rentUser/" + sessionStorage.getItem("id"),
       {
         method: "GET",
       }
     )
 
-    const dataRent = await rentResults.json();
-      console.log("dataMovie: " + dataRent.length);
-      setRent(dataRent);
+    const dataRents = await rentsResults.json();
+      console.log("dataMovie: " + dataRents.length);
+      setRents(dataRents);
   };
 
   useEffect(() => {
     try {
-        rentList();
+        rentsList();
     } catch (error) {
       console.log(error);
     }
@@ -31,9 +31,13 @@ const InfoUserRents = () => {
   return (
     <div >
       <div className='wrapper'>
-        {rent.map((oRent) =>{
+        {rents.map((objRent) =>{
           return( 
-          <span> rents={oRent.idMovie}</span>);
+            <div>
+          <span> rents={objRent.idMovie}</span>
+            </div>
+          );
+         
           })}
       </div>
     </div>
