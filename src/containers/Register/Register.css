@@ -1,5 +1,24 @@
+.register{
+    background-image: url('../../images/deadpool.jpg');
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+h1{
+    color:white;
+}
+
+.containerRegister{
+    width: 40%;
+    margin-left: 30%;
+}
 
 .conditions{
     color:gray;
     font-size: small;
 }
+
+
+
+
