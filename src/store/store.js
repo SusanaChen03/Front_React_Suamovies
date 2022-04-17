@@ -3,7 +3,10 @@ import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP,USER_LOGOUT} from "./types";
 
 const initialState = {
     logged:false,
-    popup: { visibility: false, text: "" }
+    popup: { visibility: false, text: "" },
+    token: null,
+    id: 0,
+    name: ""
 };
 
 
@@ -11,7 +14,10 @@ const reductor = (state = initialState, action) => {
     if (action.type === USER_LOGGED) {
         return {
             ... state,
-            logged: true
+            logged: true,
+            token: action.payload.token,
+            id: action.payload.id,
+            name: action.payload.name
         };
     }
 

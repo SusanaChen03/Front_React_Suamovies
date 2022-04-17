@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {actionCreator} from "../../store/actionTypes.js";
 import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP, URL_API } from "../../store/types";
-
+import componentPopup from "../../containers/PopUp/PopUp.js";
 
 const LoginUser = () => {
  
@@ -39,17 +39,17 @@ const LoginUser = () => {
         sessionStorage.setItem("name", data.name);
 
        if (sessionStorage.getItem("rol") === "admin") {
-          dispatch( actionCreator(USER_LOGGED));
+          dispatch( actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name }));
           dispatch( actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenid@ Admin"));
     
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
-          navigate("/HomeUser");
+          navigate("/home");
         } else {
-          dispatch(actionCreator(USER_LOGGED));
+          dispatch(actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name }));
           dispatch(actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenido" + {name: data.name}));
-            
+            console.log("Se a iniciado correctamente. Bienvenido" + {name: data.name});
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
-          navigate("/HomeUser");
+         navigate("/home");
         }
       } else {
         alert("Usuario y/o contraseña incorrecto.");
@@ -60,6 +60,7 @@ const LoginUser = () => {
   };
   return (
     <div className="login">
+    
    <form  onSubmit={(e) => formSubmit(e)}>
       <div div class="form-group containerLogin" >
         <h1>Entra en tu cuenta</h1>

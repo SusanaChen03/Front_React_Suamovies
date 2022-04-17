@@ -4,11 +4,12 @@ import store from '../../store/store';
 import { Link } from 'react-router-dom';
 const Header = () => {
   const [logged, setLogged] = useState(false);
-
+  const [name, setName] = useState("");
+ 
   useEffect(() => {
       store.subscribe(() => {
-          console.log("El estado: " + store.getState().logged + "id:" + store.getState().id);
-
+          console.log("El estado: " + store.getState().logged + "name:" + store.getState().name);
+          setName(store.getState().name[0]);
           setLogged(store.getState().logged);
       });
   }, []);
@@ -74,9 +75,11 @@ const Header = () => {
 
           </form>
           {!logged  &&   < Link to="/register"><button className="register" type="button" class="btn btn-primary">Registrate</button></Link>}
-          {!logged  && <Link to="/login"><button className="register" type="button" class="btn btn-primary Login">Login</button></Link>}
+         
           {logged  && <Link to="/logout"><button className="register" type="button" class="btn btn-primary Login">Logout</button></Link>}
-        
+          {logged  && <div className="circle">
+          {name}
+          </div>}
         </div>
       </div>
     </nav>
