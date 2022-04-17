@@ -20,6 +20,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/home' element={<HomeUser />} />
           <Route path='/rentMovies' element={<RentMovies />}/>
+          
         </Routes>
       </BrowserRouter>
     </div>

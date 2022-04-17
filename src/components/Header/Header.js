@@ -67,7 +67,7 @@ const Header = () => {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a link to class="dropdown-item" href="#">
                     Mis Alquileres
                   </a>
                 </li>
