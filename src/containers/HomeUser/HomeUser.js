@@ -2,14 +2,16 @@ import './HomeUser.css';
 import { useState, useEffect } from "react";
 import { URL_API } from "../../store/types";
 import MovieCard from '../../components/MovieCard/MovieCard.js';
-import { useSearchParams } from "react-router-dom";
-import { useParams,useLocation  } from "react-router-dom";
+//import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
+
 const HomeUser = () => {
 
   const [movie, setMovie] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
+  //const [searchParams, setSearchParams] = useSearchParams();
   const { id } = useParams();
-  const location = useLocation();
   const movieList = async () => {
      
     
@@ -42,8 +44,6 @@ const HomeUser = () => {
 
   useEffect(() => {
     try {
-      
-     ;
       movieList();
     } catch (error) {
       console.log(error);
