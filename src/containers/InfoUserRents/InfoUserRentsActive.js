@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import { URL_API } from "../../store/types";
 import RentCard from '../../components/MovieCard/RentCard.js';
 
-const InfoUserRents = () => {
+const InfoUserRentsActive = () => {
 
 
   const [rents, setRents] = useState([]);
 
   const rentsList = async () => {
-    const rentsResults = await fetch( URL_API + "/rentUser/" + sessionStorage.getItem("id"),
+    const rentsResults = await fetch( URL_API + "/rentActive/" + sessionStorage.getItem("id"),
       {
         method: "GET",
       }
@@ -40,4 +40,4 @@ const InfoUserRents = () => {
   );
 };
 
-export default InfoUserRents;
+export default InfoUserRentsActive;

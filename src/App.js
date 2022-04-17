@@ -8,6 +8,7 @@ import Register from './containers/Register/Register.js'
 import HomeUser from './containers/HomeUser/HomeUser';
 import RentMovies from './containers/RentMovies/RentMovies.js';
 import InfoUserRents from './containers/InfoUserRents/InfoUserRents';
+import InfoUserRentsActive from './containers/InfoUserRents/InfoUserRentsActive';
 
 function App() {
   console.log("hola");
@@ -21,6 +22,7 @@ function App() {
           <Route path='/home' element={<HomeUser />} />
           <Route path='/rentMovies' element={<RentMovies />}/>
           <Route path='/infoUserRents' element={<InfoUserRents/>}/>
+          <Route path='/infoUserRents/active' element={<InfoUserRentsActive/>}/>
         </Routes>
       </BrowserRouter>
     </div>
