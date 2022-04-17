@@ -6,7 +6,8 @@
 }
 
 h1{
-    color:white;
+    color: #649ff9;
+    font-weight:bold;
 }
 
 .containerRegister{
@@ -15,10 +16,13 @@ h1{
 }
 
 .conditions{
-    color:gray;
+    color:rgb(176, 169, 169);
     font-size: small;
 }
 
+label{
+    color: white;
+}
 
 
 
