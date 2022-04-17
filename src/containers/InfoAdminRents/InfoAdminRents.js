@@ -30,7 +30,7 @@ const InfoAdminRents = () => {
 
   return (
     <div >
-      <div className='tableContainer'  >
+      <div className='tableContainer info'  >
         <table class="table">
           <tr>
             <th scope="col" >Usuario</th>
@@ -38,7 +38,7 @@ const InfoAdminRents = () => {
             <th scope="col" >Genero</th>
             <th scope="col" >Horas Alquiler</th>
             <th scope="col" >Fecha Alquiler</th>
-            <th  scope="col" >Fecha Exp</th>
+            <th scope="col" >Fecha Exp</th>
         </tr>
         {rents.map((objRent) =>{
           return <AdminCard Rent={objRent}/>

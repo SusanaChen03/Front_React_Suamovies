@@ -1,8 +1,8 @@
+import './AdminCard.css';
 
 const AdminCard = (Rent) => {
   
   return (
-     
     <tr class="container">
       <td>{Rent.Rent.idUser.name}</td>
       <td>{Rent.Rent.idMovie.name}</td>
