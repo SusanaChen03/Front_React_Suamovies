@@ -12,7 +12,7 @@ import InfoUserRentsActive from './containers/InfoUserRents/InfoUserRentsActive'
 import InfoAdminRents from './containers/InfoAdminRents/InfoAdminRents';
 
 function App() {
-  console.log("hola");
+  //console.log("hola");
   return (
     <div className="App">
          <BrowserRouter>
