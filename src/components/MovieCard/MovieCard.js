@@ -5,9 +5,11 @@ const MovieCard = (movie) => {
   console.log("movie: "+ movie.movie.year);
   const navigate = useNavigate();
   let imagenMovie="https://icon-library.com/images/movies-icon/movies-icon-6.jpg";
+
   const buttonHandler = () => {
     navigate('/rentMovies', { state: movie });
-}
+};
+
   return (
     <div class="container">
     <div class="card">
@@ -18,11 +20,9 @@ const MovieCard = (movie) => {
         <h2 class='titulo'>{movie.movie.name}</h2>
         <div class="size">
           <h3 >Género : {movie.movie.genre}</h3>
-           
         </div>
         <div class="color">
           <h3>Año :{movie.movie.year}</h3>
-          
         </div>
         <a href="#" onClick={buttonHandler}>Seleccionar</a>
       </div>
@@ -34,4 +34,3 @@ const MovieCard = (movie) => {
 
 export default MovieCard;
 
-/*<button type="button" class="btn btn-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información</font></font></button>*/
