@@ -1,22 +1,12 @@
 import './Login.css';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
 import {actionCreator} from "../../store/actionTypes.js";
-import { useEffect, useState } from 'react';
-import store from '../../store/store';
-import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP, URL_API, USER_LOGOUT } from "../../store/types";
+import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP, URL_API } from "../../store/types";
 
 
 const LoginUser = () => {
-  const [logged, setLogged] = useState(false);
-  useEffect(() => {
-    store.subscribe(() => {
-        console.log("El estado: " + store.getState().login + "id:" + store.getState().id);
-
-        setLogged(store.getState().login);
-    });
-}, []);
+ 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -77,7 +67,7 @@ const LoginUser = () => {
 
         <label for="exampleInputEmail1" class="form-label mt-4"> Email</label>
         <input type="email"  class="form-control"  id="email"  aria-describedby="emailHelp" placeholder="Enter email"  />
-        <small id="emailHelp" class="form-text text-muted">  We'll never share your email with anyone else. </small>
+        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email a terceros </small>
       </div>
 
       <div div class="form-group containerLogin">

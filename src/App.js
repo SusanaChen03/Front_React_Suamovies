@@ -14,7 +14,7 @@ function App() {
     <div className="App">
          <BrowserRouter>
     <Header/>
-    <Register></Register>
+    <LoginUser></LoginUser>
         <Routes>
           <Route path='/login' element={<LoginUser />} />
          
