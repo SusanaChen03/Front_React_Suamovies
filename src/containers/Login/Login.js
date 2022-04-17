@@ -39,13 +39,13 @@ const LoginUser = () => {
         sessionStorage.setItem("name", data.name);
         sessionStorage.setItem("logged",true);
        if (sessionStorage.getItem("rol") === "admin") {
-          dispatch( actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name }));
+          dispatch( actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name, role:data.role }));
           dispatch( actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenid@ Admin"));
     
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
           navigate("/home");
         } else {
-          dispatch(actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name }));
+          dispatch(actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name, role:data.role }));
           dispatch(actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenido" + {name: data.name}));
             console.log("Se a iniciado correctamente. Bienvenido" + {name: data.name});
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);

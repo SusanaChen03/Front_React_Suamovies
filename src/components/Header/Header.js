@@ -11,6 +11,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const [logged, setLogged] = useState(false);
+  const [isAdmin, setisAdmin] = useState(false);
   const [name, setName] = useState("");
   const buttonHandler = async () => {
     try {
@@ -29,6 +30,8 @@ const Header = () => {
           console.log("El estado: " + store.getState().logged + "name:" + store.getState().name);
           setName(store.getState().name[0]);
           setLogged(store.getState().logged);
+          setisAdmin(store.getState().isAdmin);
+           
       });
        setName(sessionStorage.getItem("name")[0]);
       setLogged(sessionStorage.getItem("logged"));
@@ -80,6 +83,19 @@ const Header = () => {
                   <hr class="dropdown-divider" />
                 </li>
               </ul>
+            </li>}
+            {logged && isAdmin && <li class="nav-item dropdown">
+               
+            <Link to="/infoUserRents/active">   <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                 
+              >
+                Todos los alquileres
+              </a></Link>
+               
             </li>}
           </ul>
           <form class="d-flex hd">
