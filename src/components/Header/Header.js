@@ -1,6 +1,17 @@
 import "./Header.css";
-
+import { useEffect, useState } from 'react';
+import store from '../../store/store';
+import { Link } from 'react-router-dom';
 const Header = () => {
+  const [logged, setLogged] = useState(false);
+
+  useEffect(() => {
+      store.subscribe(() => {
+          console.log("El estado: " + store.getState().logged + "id:" + store.getState().id);
+
+          setLogged(store.getState().logged);
+      });
+  }, []);
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -21,12 +32,8 @@ const Header = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
         
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li class="nav-item dropdown">
+           
+          {logged  && <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -52,9 +59,9 @@ const Header = () => {
                   <hr class="dropdown-divider" />
                 </li>
               </ul>
-            </li>
+            </li>}
           </ul>
-          <form class="d-flex">
+          <form class="d-flex hd">
             <input
               class="form-control me-2"
               type="search"
@@ -66,7 +73,9 @@ const Header = () => {
             </button>
 
           </form>
-          <button className="register" type="button" class="btn btn-primary">Registrate</button>
+          {!logged  &&  <button className="register" type="button" class="btn btn-primary">Registrate</button>}
+          {!logged  && <Link to="/login"><button className="register" type="button" class="btn btn-primary Login">Login</button></Link>}
+          {logged  && <Link to="/login"><button className="register" type="button" class="btn btn-primary Login">Logout</button></Link>}
         </div>
       </div>
     </nav>
