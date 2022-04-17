@@ -29,8 +29,8 @@ const InfoUserRents = () => {
   }, []);
 
   return (
-    <div className="userRent">
-         <div className="wrapper userRent">
+    <div >
+         <div className='wrapper'>
         {rents.map((objRent) =>{
           return <RentCard rent={objRent}/>
         })}

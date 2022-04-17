@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "./RentCard.css";
 
 const RentCard = (Rent) => {
@@ -40,4 +39,3 @@ const RentCard = (Rent) => {
 
 export default RentCard;
 
-/*<button type="button" class="btn btn-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información</font></font></button>*/
