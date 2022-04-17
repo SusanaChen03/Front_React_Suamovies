@@ -11,14 +11,14 @@ const LoginUser = () => {
   const navigate = useNavigate();
 
   const formSubmit = async (e) => {
-    // Make the submit dont refresh the page
+    
     e.preventDefault();
+
     console.log(e.target[0].value + "target");
     try {
       const formData = {
         email: e.target[0].value,
         password: e.target[1].value
-       
     };
       let loginUser = await fetch( URL_API + "/login",
         {
@@ -38,12 +38,15 @@ const LoginUser = () => {
         sessionStorage.setItem("rol", data.role);
         sessionStorage.setItem("name", data.name);
         sessionStorage.setItem("logged",true);
+
+
        if (sessionStorage.getItem("rol") === "admin") {
           dispatch( actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name, role:data.role }));
           dispatch( actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenid@ Admin"));
     
           setTimeout(() => dispatch(actionCreator(HIDDEN_POPUP)), 2000);
           navigate("/home");
+
         } else {
           dispatch(actionCreator(USER_LOGGED, { token: data.userToken, id: data.idUser, name:data.name, role:data.role }));
           dispatch(actionCreator(SHOW_POPUP, "Se a iniciado correctamente. Bienvenido" + {name: data.name}));
@@ -60,7 +63,6 @@ const LoginUser = () => {
   };
   return (
     <div className="login">
-    
    <form  onSubmit={(e) => formSubmit(e)}>
       <div div class="form-group containerLogin" >
         <h1>Entra en tu cuenta</h1>
