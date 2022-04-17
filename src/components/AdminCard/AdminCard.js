@@ -1,8 +1,5 @@
 
 const AdminCard = (Rent) => {
-   
- 
-   
   
   return (
      
@@ -20,4 +17,3 @@ const AdminCard = (Rent) => {
 
 export default AdminCard;
 
-/*<button type="button" class="btn btn-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información</font></font></button>*/
