@@ -65,14 +65,14 @@ const LoginUser = () => {
       <div div class="form-group containerLogin" >
         <h1>Entra en tu cuenta</h1>
 
-        <label for="exampleInputEmail1" class="form-label mt-4"> Email</label>
-        <input type="email"  class="form-control"  id="email"  aria-describedby="emailHelp" placeholder="Enter email"  />
+        <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
+        <input type="email"  class="form-control"  id="email"  aria-describedby="emailHelp" placeholder="Introduce tu email"  />
         <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email a terceros </small>
       </div>
 
       <div div class="form-group containerLogin">
-        <label for="exampleInputPassword1" class="form-label mt-4">Password  </label>
-        <input type="password"  class="form-control"  id="password" placeholder="Password"  />
+        <label for="exampleInputPassword1" class="form-label mt-4">Contraseña</label>
+        <input type="password"  class="form-control"  id="password" placeholder="Introduce tu contraseña"  />
       </div>
       <div div class="form-group containerLogin buttonSubmit">
       <button type="submit" class="btn btn-primary"> Login </button>
