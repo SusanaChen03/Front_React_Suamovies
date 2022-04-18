@@ -1,6 +1,6 @@
 import './InfoUserRents.css';
 import { useState, useEffect } from "react";
-import { URL_API } from "../../store/types";
+import { URL_API } from "../../store/types.js";
 import RentCard from '../../components/RentCard/RentCard.js';
 
 const InfoUserRents = () => {

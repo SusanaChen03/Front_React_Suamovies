@@ -1,7 +1,7 @@
 import './RentMovies.css';
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { URL_API } from "../../store/types";
+import { URL_API } from "../../store/types.js";
 
 
 const RentMovies = () =>{

@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP,USER_LOGOUT} from "./types";
+import { HIDDEN_POPUP, USER_LOGGED, SHOW_POPUP,USER_LOGOUT} from "./types.js";
 
 const initialState = {
     logged:false,

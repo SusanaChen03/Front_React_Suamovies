@@ -2,9 +2,9 @@ import "./Header.css";
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import store from '../../store/store';
+import store from '../../store/store.js';
 import { Link } from 'react-router-dom';
-import { USER_LOGOUT } from "../../store/types";
+import { USER_LOGOUT } from "../../store/types.js";
 import {actionCreator} from "../../store/actionTypes.js";
 
 

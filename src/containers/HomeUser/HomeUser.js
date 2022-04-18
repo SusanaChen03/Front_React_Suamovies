@@ -1,6 +1,6 @@
 import './HomeUser.css';
 import { useState, useEffect } from "react";
-import { URL_API } from "../../store/types";
+import { URL_API } from "../../store/types.js";
 import MovieCard from '../../components/MovieCard/MovieCard.js';
 //import { useSearchParams } from "react-router-dom";
 import { useParams } from "react-router-dom";

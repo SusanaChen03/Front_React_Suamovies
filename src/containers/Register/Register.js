@@ -2,7 +2,7 @@ import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {actionCreator} from "../../store/actionTypes.js";
-import { HIDDEN_POPUP, SHOW_POPUP, URL_API } from "../../store/types";
+import { HIDDEN_POPUP, SHOW_POPUP, URL_API } from "../../store/types.js";
 
 const Register = () => {
 
