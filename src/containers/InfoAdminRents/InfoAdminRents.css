@@ -1,0 +1,17 @@
+.tableContainer{
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.info{
+    background-image: url('../../images/fondo\ movies.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+th{
+    font-size: 30px;
+    color:white;
+}

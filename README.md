@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+![logo](./src/images/ps_movies.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bienvenidos a SuaMovies!!!!
 
-## Available Scripts
+## Introducción
+---
+Este es un proyecto individual de la academia GeeksHub, la elaboración del Front y adaptación de un back existente de un videoclub para el alquiler de peliculas online utilizando React con Redux.
 
-In the project directory, you can run:
+## Tech Stack
+---
+Se han utilizado las siguientes tecnologías:
 
-### `npm start`
+<p align="left>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<a href="https://reactjs.org/" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="javascript" width="40" height="40"/></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a href="https://www.tutorialspoint.com/redux/redux_devtools.htm" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="javascript" width="40" height="40"/></a>
 
-### `npm test`
+<a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="javascript" width="40" height="40"/></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://desarrolloweb.com/home/html" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="javascript" width="40" height="40"/></a>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Manual de uso
+----
+Gracias por vuestra confianza depositada en nosotros a lo largo del alquiler en esta nueva plataforma, al fin, pudimos sacar una aplicación para facilitaros alquilar nuevas peliculas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aquí os dejo explicado brevemente la estructura de la aplicación y como utilizarla:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Paso 1. Descargar la app vía web, próximamente saldrá la versión para móvil. De momento es un MVP(mínimo producto viable, las mejoras irán viniendo).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Paso 2. Llegarás a nuestra página de INICIO para logearte, si no tienes ya cuenta, puedes registrarte en el botón que se encuentra arriba a la derecha.
+Para el registro necesitarás introducir los siguientes datos:
 
-## Learn More
+```html
+Nombre:
+Correo electrónico:
+Contraseña:
+```
+Si ya tienes una cuenta con nosotros solo tienes que rellenar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`````html
+Correo electrónico:
+Contraseña:
+`````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Después de darle a Crear Cuenta te saldrá directamente la página del login para acceso a la plataforma de alquiler:
 
-### Code Splitting
+Paso 3. Una vez en el home podras ver todas la peliculas que actualmente tenemos en la plataforma.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Paso 4. Selecciona una pelicula y pulsa en el boton de alquilar.
 
-### Analyzing the Bundle Size
+- Veras los detalles de la pelicula que deseas alquilar y podrás confirmar el alquiler.
+- Una vez confirme el alquiler podrás visualizar todos tus alquileres en la sección Alquileres -> Mis Alquileres
+- En la sección Alquileres -> Mis Alquileres Activos, verás la lista de películas que están activas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Si quieres Filtrar las búsquedas de las películas:
 
-### Making a Progressive Web App
+Escribe el texto por el que buscar en la sección superior del menu "Search" y pulsa en buscar , te filtrará todas las peliculas cuyo nombre , actores o genero coincida con tu texto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Si Eres Administrador:
 
-### Advanced Configuration
+Si eres Administrador , ademas de poder alquilar peliculas y demás operaciones que puede realizar un usuario normal, podrás visualizar todas la peliculas que se han alquilado por todos los usuarios.
+Para poder verlo, tan solo tienes que pulsar en la opción del menú superior `Todos Alquileres` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ 
+Para terminar solo tienes que darle al botón de `Logout` para finalizar la sesión.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Autores
+-----
+ Link a nuestros repositorios:
+ 
+* [Susana chen](https://github.com/susanachen03)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Como ayudar
+----
+* Si deseas colaborar con éste proyecto u otro no dudes en contactar con nosotras o solicitar una pull request.
+* Nuestros correos electrónicos son:  [grupochen@hotmail.com](mailto:grupochen@hotmail.com)
+* Cualquier aporte se puede compensar en una quedada de cervezas o café para los que no beben cerveza.
+  
+## Agradecimientos
+----
+
+*  A nuestro profesor titular Gonzalo, que se esfuerza día a día para que seamos mejores programadores.
+*  A nuestros compañeros que siempre estan dispuestos a ayudar como un equipo de remo.
+*  Repositorio público con código libre con el fin de seguir promoviendo compartir conocimientos y ayudar a otros programadores.
+*  Agradecimiento a Jose Villanueva por la ayuda, paciencia y dedicación a la resolución de problemas encontrados.
